@@ -7,6 +7,4 @@ function getUrlParameter(name) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-function test() {
-  alert(getUrlParameter("code"))
-}
+const code = getUrlParameter("code")
