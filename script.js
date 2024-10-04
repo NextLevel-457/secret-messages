@@ -8,5 +8,5 @@ function getUrlParameter(name) {
 }
 
 function test() {
-  console.log(getUrlParameter("code")
+  alert(getUrlParameter("code"))
 }
