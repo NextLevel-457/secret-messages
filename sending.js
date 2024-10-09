@@ -7,4 +7,16 @@ function getUrlParameter(name) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+const backendUrl = 'https://nextlevel457-secret-messages.glitch.me/';
+
 const code = getUrlParameter("code")
+
+function sendMessage(message) {
+  fetch(`${backendUrl}/increment`, {
+    method: 'POST',
+    data: {
+      'user': code,
+      'message': document.getElementById('input').value,
+    },
+  });
+}
