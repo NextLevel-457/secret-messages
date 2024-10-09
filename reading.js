@@ -4,7 +4,7 @@ function arrayToList(array) {
         const p = document.createElement("p");
         messages.push(item)
         p.innerHTML = item.message;
-        document.getElementById("list-container").appendChild(p);
+        document.getElementById("message section").appendChild(p);
     });
 }
 
