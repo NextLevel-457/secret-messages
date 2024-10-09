@@ -11,7 +11,7 @@ const backendUrl = 'https://nextlevel457-secret-messages.glitch.me/';
 
 const code = getUrlParameter("code")
 
-function sendMessage(message) {
+function sendMessage() {
   fetch(`${backendUrl}/increment`, {
     method: 'POST',
     data: {
