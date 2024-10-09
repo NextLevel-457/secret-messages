@@ -14,7 +14,7 @@ const code = getUrlParameter("code")
 function sendMessage() {
   fetch(`${backendUrl}/send-message`, {
     method: 'POST',
-    data: {
+    body: {
       'user': code,
       'message': document.getElementById('input').value,
     },
