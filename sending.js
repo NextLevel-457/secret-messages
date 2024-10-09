@@ -27,6 +27,6 @@ function sendMessage() {
 }
 
 function setup() {
-  document.getElementById('to').innerHTML = "Send a secret message to " + code + "!";
+  document.getElementById('to').innerHTML = "Send a secret message to " + code.slice(0,-5) + "!";
 }
 window.onload = setup;
