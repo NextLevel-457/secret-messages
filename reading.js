@@ -1,6 +1,5 @@
 function arrayToList(array) {
     const ul = document.createElement("ul");
-
     array.forEach(item => {
         const li = document.createElement("li");
         li.textContent = item;  // Set the text of the list item
@@ -35,5 +34,7 @@ async function getMessages() {
         body: JSON.stringify(user),
     });
     const data = await response.json();
-    arrayToList(data)
+    arrayToList(data.messages)
 }
+
+window.onload = getMessages;
