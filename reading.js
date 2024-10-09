@@ -1,12 +1,11 @@
+let messages = []
 function arrayToList(array) {
-    const ul = document.createElement("ul");
     array.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;  // Set the text of the list item
-        ul.appendChild(li);  // Append the list item to the unordered list
+        const p = document.createElement("p");
+        messages.push(item)
+        p.innerHTML = item.message;
+        document.getElementById("list-container").appendChild(p);
     });
-
-    document.getElementById("list-container").appendChild(ul);
 }
 
 function getUrlParameter(name) {
