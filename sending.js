@@ -24,3 +24,8 @@ function sendMessage() {
     body: JSON.stringify(data),
   });
 }
+
+function setup() {
+  document.getElementById('to').innerHTML = "Send a secret message to " + code + "!";
+}
+window.onload = setup;
