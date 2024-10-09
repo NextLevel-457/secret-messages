@@ -23,6 +23,17 @@ const backendUrl = 'https://nextlevel457-secret-messages.glitch.me/';
 
 const code = getUrlParameter("code")
 
-function getMessages() {
-    
+async function getMessages() {
+    const user = {
+        'user': code
+    }
+    const response = await fetch(`${backendUrl}/get-messages`,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+    });
+    const data = await response.json();
+    arrayToList(data)
 }
