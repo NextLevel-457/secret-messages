@@ -23,6 +23,7 @@ function sendMessage() {
     },
     body: JSON.stringify(data),
   });
+  document.getElementById('sent').innerHTML = "Sent!";
 }
 
 function setup() {
