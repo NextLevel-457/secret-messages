@@ -14,9 +14,6 @@ function arrayToList(array) {
     });
 }
 
-function blockUser(ip) {
-}
-
 function getUrlParameter(name) {
   name = name.replace(/[\[\]]/g, '\\$&');
   const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
@@ -29,6 +26,20 @@ function getUrlParameter(name) {
 const backendUrl = 'https://nextlevel457-secret-messages.glitch.me/';
 
 const code = getUrlParameter("code")
+
+function blockUser(ip) {
+    const data = {
+        'ip': ip,
+        'user': code,
+    };
+    fetch(`${backendUrl}/block-user`, {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+}
 
 async function getMessages() {
     const user = {
