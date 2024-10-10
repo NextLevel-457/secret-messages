@@ -10,7 +10,7 @@ function arrayToList(array) {
         block.innerHTML = "Block Sender";
         document.getElementById("message section").appendChild(l);
         document.getElementById("message section").appendChild(block);
-        document.getElementById("message section").appendChild(document.createElement("br"););
+        document.getElementById("message section").appendChild(document.createElement("br"));
     });
 }
 
