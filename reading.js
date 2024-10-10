@@ -1,11 +1,19 @@
 let messages = []
 function arrayToList(array) {
     array.forEach(item => {
-        const p = document.createElement("p");
+        const l = document.createElement("label");
+        const block = document.createElement("button");
+        const ip = item.ip;
+        block.setAttribute("onclick","blockUser(" + ip + ");")
         messages.push(item)
-        p.innerHTML = item.message;
+        l.innerHTML = item.message;
+        block.innerHTML = "Block Sender";
         document.getElementById("message section").appendChild(p);
+        document.getElementById("message section").appendChild(block);
     });
+}
+
+function blockUser(ip) {
 }
 
 function getUrlParameter(name) {
