@@ -8,7 +8,7 @@ function arrayToList(array) {
         messages.push(item)
         l.innerHTML = item.message;
         block.innerHTML = "Block Sender";
-        document.getElementById("message section").appendChild(p);
+        document.getElementById("message section").appendChild(l);
         document.getElementById("message section").appendChild(block);
     });
 }
