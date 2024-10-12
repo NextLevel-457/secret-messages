@@ -4,7 +4,7 @@ function arrayToList(array) {
         const l = document.createElement("label");
         const block = document.createElement("button");
         const ip = item.ip;
-        block.setAttribute("onclick","blockUser(" + ip + ");")
+        block.setAttribute("onclick","blockUser(" + ip.toString() + ");")
         messages.push(item)
         l.innerHTML = item.message;
         block.innerHTML = "Block Sender";
