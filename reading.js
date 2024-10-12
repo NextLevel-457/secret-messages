@@ -1,16 +1,18 @@
 let messages = []
-function arrayToList(array) {
+function arrayToList(array,data) {
+    var i = 0;
     array.forEach(item => {
         const l = document.createElement("label");
         const block = document.createElement("button");
-        const ip = item.ip;
-        block.setAttribute("onclick","blockUser(" + ip.toString() + ");")
+        const ip = item.sender;
+        block.setAttribute("onclick","blockUser(" + ip + ");")
         messages.push(item)
         l.innerHTML = item.message;
         block.innerHTML = "Block Sender";
         document.getElementById("message section").appendChild(l);
         document.getElementById("message section").appendChild(block);
         document.getElementById("message section").appendChild(document.createElement("br"));
+        i = i + 1;
     });
 }
 
